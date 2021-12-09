@@ -1,17 +1,22 @@
-function ask() {
-    const words = []
-let answer = true;
-for (let i = 0; true; i++) {
-    if (i%3=== && i!==0) {
-        answer = confirm ('Ready to continue?');
-    }
-    if (!answer) {
-        break;
-    }
-    const currentWord = prompt ('enter your word');
-    words.push(current.Word);
-}
-console.log(words);
+function addName() {
+    var arrContainer = document.getElementById('array');
 
+    var arr = []; 
+    for(var i=0; i < 5; i++) {
+
+        arr[i] = prompt('Enter any word', +i); 
+        if(arr[i] === null) {
+            alert('Отмена');
+            return;
+        }
+
+        if(arr[i] === '') { 
+            alert('You didnt put any word');
+            arr[i] = prompt('Enter any word'); 
+        }
+    }
+
+    arrContainer.innerHTML = '';
+    arrContainer.innerHTML = arr;
 }
-ask();
+    console.log(arr); 
