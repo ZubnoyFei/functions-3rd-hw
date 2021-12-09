@@ -1,5 +1,5 @@
 function addName() {
-    var arrContainer = document.getElementById('array');
+    const arrContainer = ('array');
 
     var arr = []; 
     for(var i=0; i < 5; i++) {
