@@ -1,14 +1,16 @@
-function askUser () {
-let answer = prompt('Enter the number');
-do {answer = prompt('Enter the number');
-} while (false){
-if(answer=false){
-break;
+function askUser() {
+    const Words = [];
+    let answer = true;
+    for (let i = 0; true; i++) {
+        if (i % 3 === 0 && i !== 0) {
+            answer = confirm('Ready to continue?');
+        }
+        if (!answer) {
+            break;
+        }
+        const currentWord = prompt('Enter your word');
+        words.push(currentWord);
+    }
 }
-  for (let i=0; i<3; i++) {console.log(i)}
-}
-console.log(answer);
-}
- 
- askUser();
-    
+console.log(Words);
+askUser();
